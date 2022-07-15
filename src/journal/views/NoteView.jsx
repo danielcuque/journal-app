@@ -12,8 +12,8 @@ import "sweetalert2/dist/sweetalert2.css";
 import { useForm } from "../../hooks/useForm";
 import {
   setActiveNote,
-  startSaveNotes,
-  startUloadingFiles,
+  startSaveNote,
+  startUploadingFiles,
   startDeletingNote,
 } from "../../store/journal";
 import { ImageGallery } from "../components";
@@ -45,13 +45,13 @@ export const NoteView = () => {
   }, [messageSaved]);
 
   const onSaveNote = () => {
-    dispatch(startSaveNotes());
+    dispatch(startSaveNote());
   };
 
   const onFileInputChange = ({ target }) => {
     if (target.files === 0) return;
 
-    dispatch(startUloadingFiles(target.files));
+    dispatch(startUploadingFiles(target.files));
   };
 
   const onDeleteNote = () => {

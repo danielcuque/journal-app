@@ -1,9 +1,11 @@
-import { AddOutlined } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { startNewNote } from "../../store/journal/thunks";
+
+import { IconButton } from "@mui/material";
+import { AddOutlined } from "@mui/icons-material";
+
 import { JournalLayout } from "../layout/JournalLayout";
 import { NoteView, NothingSelectedView } from "../views";
+import { startNewNote } from "../../store/journal/thunks";
 
 export const JournalPage = () => {
   const dispatch = new useDispatch();
